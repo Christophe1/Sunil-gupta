@@ -1,0 +1,107 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/LinearLayout1"
+    android:layout_height="match_parent"
+    android:layout_width="match_parent"
+    android:orientation="vertical"
+    android:paddingBottom="0dp"
+    android:paddingLeft="0dp"
+    android:paddingRight="0dp"
+    android:paddingTop="0dp"
+    tools:context=".MainActivity">
+
+    <ListView android:id="@+id/ListView_CallData"
+        android:layout_height="wrap_content"
+        android:layout_width="match_parent"
+        android:layout_weight="1">
+    </ListView>
+<!--Let's set the height of the linearlayout below to 0dp. Apparently it's less work on resources,
+as otherwise we would be drawing it twice, because the size is also set dynamically-->
+<LinearLayout
+    android:id="@+id/LinearLayout2"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:orientation="horizontal"
+        >
+        <!--android:adjustViewBounds="true"-->
+    <!-- we want the text to begin in the centre of the edittext view
+    that's what gravity does-->
+
+    <EditText
+        android:layout_width="0dp"
+        android:layout_height="match_parent"
+        android:id="@+id/editText"
+        android:inputType="phone"
+        android:gravity="center"
+        android:background="#d9d9d9"
+        android:layout_weight="1"
+        />
+
+
+
+
+    <View android:layout_height="fill_parent"
+        android:layout_width="2px"
+        android:background="#90909090"/>
+
+
+        <ImageButton
+            android:layout_width="0px"
+            android:layout_height="match_parent"
+            android:id="@+id/callButton"
+            android:src="@drawable/phone_ring3"
+            android:clickable="true"
+            android:onClick="softkeyboardButton"
+            android:background="#48ac00"
+            />
+    <!--android:background="@drawable/buttonstates"-->
+            <!--android:layout_weight="0"-->
+
+
+</LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:orientation="horizontal" >
+
+    <CheckBox
+        android:layout_height="match_parent"
+        android:layout_width="0dp"
+        android:background="#ffa500"
+        android:text="New CheckBox"
+        android:id="@+id/checkBox"
+        android:layout_weight="1"
+        />
+
+
+        <ImageButton
+            android:layout_height="match_parent"
+            android:layout_width="80px"
+            android:id="@+id/keyboardButton"
+            android:src="@drawable/softkeyboard"
+            android:clickable="true"
+            android:onClick="softkeyboardButton"
+            android:layout_gravity="center_horizontal"
+            android:background="@drawable/buttonstates"
+             />
+        <!--android:layout_weight="1"-->
+
+        <View android:layout_height="fill_parent"
+            android:layout_width="2px"
+            android:background="#90909090"/>
+
+        <ImageButton
+            android:layout_height="match_parent"
+            android:layout_width="0dp"
+            android:id="@+id/settingsButton"
+            android:src="@drawable/settingsicon"
+            android:background="@drawable/buttonstates"
+            android:layout_gravity="center_horizontal"
+            android:layout_weight="0"
+ />
+
+    </LinearLayout>
+
+    </LinearLayout>
+
